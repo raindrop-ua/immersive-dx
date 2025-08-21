@@ -6,4 +6,5 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./features/quiz/quiz.routes').then((m) => m.QUIZ_ROUTES),
   },
+  { path: '', redirectTo: 'quiz', pathMatch: 'full' },
 ];
