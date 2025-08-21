@@ -1,11 +1,9 @@
 @if (quiz.currentQuestion(); as question) {
-  <h2>{{ question.text }}</h2>
-
-  @for (option of question.options; track option.id) {
-    <button (click)="select(question.id, option.id)">
-      {{ option.text }}
-    </button>
-  }
+  <app-question-card
+    [question]="question"
+    (selectAnswer)="select(question.id, $event)"
+  >
+  </app-question-card>
 
   <div style="margin-top: 12px">
     <button (click)="next()">Next</button>
@@ -13,7 +11,4 @@
       {{ quiz.currentIndex() + 1 }} / {{ quiz.total() }}
     </span>
   </div>
-} @else {
-  <p>Questions finished. Let’s see your results!</p>
-  <button (click)="goResult()">Show result</button>
 }

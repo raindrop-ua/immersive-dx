@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { QuizLogicService } from '@features/quiz/services/quiz-logic.service';
+import { QuestionCardComponent } from '@features/quiz/components/question-card/question-card.component';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-quiz-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [QuestionCardComponent, JsonPipe],
   templateUrl: './quiz-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
