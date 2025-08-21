@@ -7,7 +7,7 @@ import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-quiz-page',
   standalone: true,
-  imports: [QuestionCardComponent, JsonPipe],
+  imports: [QuestionCardComponent],
   templateUrl: './quiz-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
