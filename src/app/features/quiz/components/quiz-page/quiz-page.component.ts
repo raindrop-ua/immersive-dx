@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizLogicService } from '@features/quiz/services/quiz-logic.service';
 import { QuestionCardComponent } from '@features/quiz/components/question-card/question-card.component';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-quiz-page',
