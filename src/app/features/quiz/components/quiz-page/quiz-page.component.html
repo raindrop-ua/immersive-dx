@@ -1,0 +1,14 @@
+@if (quiz.currentQuestion(); as question) {
+  <app-question-card
+    [question]="question"
+    (selectAnswer)="select(question.id, $event)"
+  >
+  </app-question-card>
+
+  <div style="margin-top: 12px">
+    <button (click)="next()">Next</button>
+    <span style="margin-left: 8px">
+      {{ quiz.currentIndex() + 1 }} / {{ quiz.total() }}
+    </span>
+  </div>
+}

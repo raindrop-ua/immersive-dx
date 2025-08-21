@@ -1,0 +1,14 @@
+<div class="question">
+  <h3>{{ question().text }}</h3>
+  @for (option of question().options; track option.id) {
+    <label>
+      <input
+        type="radio"
+        [name]="question().id"
+        [value]="option.id"
+        (change)="selectAnswer.emit(option.id)"
+      />
+      {{ option.text }}
+    </label>
+  }
+</div>
