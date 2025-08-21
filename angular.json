@@ -20,9 +20,7 @@
             "outputPath": "dist/immersive-dx",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": [],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -115,7 +113,12 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "style": "scss",
+      "standalone": true,
+      "skipTests": true,
+      "flat": true,
+      "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
       "type": "directive"
