@@ -8,12 +8,30 @@ export class QuizApiService {
     const mock: Question[] = [
       {
         id: '1',
-        text: 'What is ChangeDetectionStrategy.OnPush?',
+        text: 'What does ChangeDetectionStrategy.OnPush do in Angular?',
         correctOptionId: 'b',
         options: [
-          { id: 'a', text: 'Disables change detection' },
-          { id: 'b', text: 'Checks only on input/observable/signal changes' },
-          { id: 'c', text: 'Always triggers zone.js globally' },
+          {
+            id: 'a',
+            text: 'Triggers change detection on every microtask',
+            description: 'Aggressive detection for all async tasks',
+          },
+          {
+            id: 'b',
+            text: 'Limits checks to input reference changes and explicit marks',
+            description:
+              'Detects on @Input ref change, events, and manual marks',
+          },
+          {
+            id: 'c',
+            text: 'Disables change detection entirely',
+            description: 'Only manual rendering',
+          },
+          {
+            id: 'd',
+            text: 'Forces checks on every animation frame',
+            description: 'Like a game loop',
+          },
         ],
       },
       {
