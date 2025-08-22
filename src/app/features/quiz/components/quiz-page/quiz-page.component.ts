@@ -8,6 +8,7 @@ import { QuestionCardComponent } from '@features/quiz/components/question-card/q
   standalone: true,
   imports: [QuestionCardComponent],
   templateUrl: './quiz-page.component.html',
+  styleUrls: ['./quiz-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuizPageComponent {
