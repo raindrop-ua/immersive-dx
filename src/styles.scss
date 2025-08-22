@@ -1,3 +1,9 @@
 @use "tailwindcss";
 @use "app/styles/fonts";
 
+@layer base {
+  :root { color-scheme: light dark; }
+
+  html { @apply h-full bg-gray-50 dark:bg-gray-950; }
+  body { @apply min-h-full bg-inherit; }
+}
