@@ -1,12 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MastheadComponent } from '../masthead/masthead.component';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  imports: [MastheadComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePageComponent {
-
-}
+export class HomePageComponent {}

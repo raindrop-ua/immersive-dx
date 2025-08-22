@@ -4,9 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-masthead',
   imports: [],
   templateUrl: './masthead.component.html',
-  styleUrl: './masthead.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MastheadComponent {
-
-}
+export class MastheadComponent {}

@@ -13,7 +13,6 @@ import { FooterComponent } from '../footer/footer.component';
   standalone: true,
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
   imports: [HeaderComponent, RouterOutlet, FooterComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
