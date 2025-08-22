@@ -1,13 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ImmersiveDx</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>ImmersiveDx</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+      (function () {
+        const root = document.documentElement;
+        const pref = localStorage.getItem("theme");
+        const sysDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (pref === "dark" || (!pref && sysDark)) root.classList.add("dark");
+        document
+          .getElementById("theme-toggle")
+          ?.addEventListener("click", function () {
+            const isDark = root.classList.toggle("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            this.setAttribute("aria-pressed", String(isDark));
+          });
+      })();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
